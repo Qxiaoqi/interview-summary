@@ -1,0 +1,11 @@
+<div id="s1">s1
+  <div id="s2">s2</div>
+</div>
+<script>
+  s1.addEventListener("click",function(e){
+      console.log("s1 捕获事件");
+  },true);
+  s2.addEventListener("click",function(e){
+      console.log("s2 捕获事件");
+  },true);
+</script>

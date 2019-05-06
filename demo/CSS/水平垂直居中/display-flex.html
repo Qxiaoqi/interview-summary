@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>flex</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .container {
+      height: 600px;
+      background-color: #000;
+
+      /* 该方法不需知宽高 */
+      display: flex;
+      /* 定义主轴对其方式 */
+      justify-content: center;
+      /* 定义交叉轴对齐方式 */
+      align-items: center;
+    }
+
+    .inner {
+      width: 200px;
+      height: 200px;
+      background-color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="inner"></div>
+  </div>
+</body>
+</html>

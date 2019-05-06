@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>animate</title>
+  <style>
+    .test {
+      box-sizing: border-box;
+      border: 5px solid #f00;
+      padding: 5px;
+      width: 100px;
+      height: 100px;
+      position:absolute;
+      /*
+      简写的姿势排序
+      @keyframes name : 动画名
+      duration 持续时间
+      timing-function 动画频率
+      delay 延迟多久开始
+      iteration-count 循环次数
+      direction 动画方式,往返还是正向
+      fill-mode  一般用来处理停留在某一帧
+      play-state running 开始,paused 暂停 ....
+       更多的参数去查文档吧..我就不一一列举了
+      */
+      animation: moveChangeColor  ease-in 2.5s 1  forwards running;
+    }
+
+    @keyframes moveChangeColor {
+       from {
+         top:0%;
+         left:5%;
+         background-color:#f00
+       }
+       to{
+         top:0%;
+         left:50%;
+         background-color:#ced;
+       }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="test"></div>
+</body>
+
+</html>

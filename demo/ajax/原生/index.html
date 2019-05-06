@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <script>
+    let data = {
+      username: "xiaoqi",
+      password: "123"
+    }
+    
+    // 原生js实现ajax
+    let xhr = new XMLHttpRequest();
+    if (xhr) {
+      xhr.onreadystatechange = onReadyStateChange;
+      xhr.open("POST", "http://localhost:3000/login", true);
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.send(JSON.stringify(data));
+    }
+
+    function onReadyStateChange() {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          console.log(xhr.responseText);
+        } else {
+          console.log("error");
+        }
+      }
+    }
+  </script>
+</body>
+</html>

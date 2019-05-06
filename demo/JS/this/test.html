@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script>
+  // 'use strict'
+
+  let o = {
+    m: function() {
+      let self = this;
+      console.log(this);
+      f();
+
+      function f() {
+        console.log(this);
+        console.log(self);
+      }
+    }
+  }
+
+  o.m();
+</script>  
+</body>
+</html> 
+
