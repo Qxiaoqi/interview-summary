@@ -16,14 +16,7 @@ function shallowCopy(sourceObj) {
 function shallowCopyES6(sourceObj) {
   if (typeof sourceObj === "object") {
     // 数组和对象
-    // let targetObj = Array.isArray(sourceObj) ? [] : {};
-    let targetObj = Object.assign(sourceObj);
-    // for (let key in sourceObj) {
-    //   if (sourceObj.hasOwnProperty(key)) {
-    //     // 把继承的去掉
-    //     targetObj[key] = sourceObj[key];
-    //   }
-    // }
+    let targetObj = Object.assign({}, sourceObj);
     return targetObj; 
   }
 }
